@@ -1,0 +1,191 @@
+:root {
+  --font-weight: 412;
+  --font-slant: 0;
+  --font-casual: 0;
+  --font-mono: 0;
+  --font-cursive: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: $font-sans;
+
+  @media #{$desktop} {
+    font-size: 123.6%;
+  }
+}
+
+* {
+	/* prettier-ignore */
+	font-variation-settings:
+		'wght' var(--font-weight),
+		'slnt' var(--font-slant),
+		'CASL' var(--font-casual),
+		'MONO' var(--font-mono),
+		'CRSV' var(--font-cursive);
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  margin: 0;
+  transition: opacity 1s ease;
+}
+
+::placeholder {
+  color: $color-ghost;
+}
+
+::selection {
+  background-color: $color-orchid;
+  color: $color-white-extra;
+}
+
+::focus {
+  outline-color: $color-teal;
+  outline-offset: 3px;
+  -moz-outline-radius: 0.618em;
+  -o-outline-radius: 0.618em;
+  outline-style: dotted;
+  outline-width: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@keyframes waves {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  --font-cursive: 1;
+  --font-casual: 1;
+  margin: 1em 0 1rem;
+  transition: all 309ms ease;
+}
+
+h1, h2, h3, h4, h5, h6, blockquote:before {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    1rad,
+    $color-flesh,
+    $color-vermilion,
+    $color-canary,
+    $color-grass,
+    $color-leaf,
+    $color-teal,
+    $color-levi,
+    $color-peri,
+    $color-violet,
+    $color-mauve,
+    $color-salmon,
+  );
+  background-position: 0% 50%;
+  background-size: 1200% auto;
+  animation-name: waves;
+  animation-duration: 12.36s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  filter: brightness(0.618) saturate(0.721);
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 1rem;
+}
+
+h1 {
+  --font-weight: 927;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h2,
+h3,
+h4 {
+  --font-weight: 824;
+}
+
+h5,
+h6 {
+  --font-weight: 721;
+}
+
+p, ul, ol {
+  line-height: 1.618;
+  --font-weight: 412;
+  --font-casual: 0;
+  margin: 1rem 0;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+@media #{$tablet} {
+  p > img {
+    max-height: 61.8vh;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+
+blockquote::before {
+  color: hsla(0, 0%, 61.8%, 0.618);
+  content: '❝';
+  font-size: 4.12em;
+  left: -0.618em;
+  position: absolute;
+  top: -0.309em;
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  text-align: right;
+}
+
+hr {
+  opacity: 0.618;
+  width: 61.8%;
+}
+
+figcaption {
+  font-size: 72.1%;
+  font-weight: 721;
+  text-align: center;
+}
+
+time {
+  color: $color-muted;
+  font-size: 0.721em;
+}
+
+.dom-loading {
+  opacity: 0;
+}

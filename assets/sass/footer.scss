@@ -1,0 +1,36 @@
+footer p {
+  font-size: 75%;
+  line-height: 1.25rem;
+  opacity: 0.75;
+}
+
+footer a {
+  color: $color-white-extra;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: $color-levi;
+}
+
+footer a:visited {
+  color: $color-white;
+}
+
+footer a:visited:hover {
+  color: $color-pink;
+}
+
+.crecom {
+  display: block;
+  margin-top: 4px;
+}
+
+.copyleft {
+  display: inline-block;
+  filter: FlipH;
+  margin: 0;
+  padding-left: 0.125em;
+  text-align: right;
+  transform: scaleX(-1);
+}

@@ -1,0 +1,27 @@
+/*
+ * MAIN
+ * assembles source for sass compiler
+ *
+ * TODO: add site params
+ * TODO: add page params from front matter
+*/
+
+@import 'variables';
+@import 'animation';
+@import 'normalize';
+@import 'base';
+@import 'back';
+@import 'grid';
+@import 'links';
+@import 'lists';
+@import 'tables';
+@import 'buttons';
+@import 'header';
+@import 'nav';
+@import 'menu';
+@import 'footer';
+@import 'posts';
+@import 'comments';
+@import 'taxonomy';
+@import 'syntax';
+@import 'search';

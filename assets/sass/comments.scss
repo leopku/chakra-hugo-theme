@@ -1,0 +1,21 @@
+.post.comments {
+  background-color: $color-comments-bg;
+  color: $color-white;
+  min-height: auto;
+
+  h2 {
+    color: $color-white;
+  }
+}
+
+@media #{$tablet} {
+  .post.comments {
+    margin-bottom: 4rem;
+  }
+}
+
+// div that wraps the iframe
+// .utterances {}
+
+// the iframe from utterances
+// .utterances-frame {}

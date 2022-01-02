@@ -1,0 +1,75 @@
+body {
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 100%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+main {
+  overflow: hidden;
+  // TODO: figure out if this is necessary
+}
+
+.col {
+  height: 100%;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: hsla(205, 12%, 12%, 0.5);
+  color: $color-white;
+  padding: 2rem 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.sticky {
+  padding-top: 2rem;
+}
+
+@media #{$phone} {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .floaty {
+    background: $color-black;
+    height: 100vh;
+    position: fixed;
+    transform: translate3d(100%, 0, 0);
+    transition: all $snappy $ease-quad;
+    width: 100vw;
+    z-index: 9;
+    @media #{$tablet} {
+      padding-top: 2em;
+    }
+
+    &.shown {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+/* enable side by side scrolling lanes */
+@media #{$tablet} {
+  .grid {
+    grid-template-columns: 7fr 3fr;
+  }
+
+  .brand {
+    flex-shrink: 0;
+  }
+}
+
+@media #{$desktop} {
+  .sidebar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

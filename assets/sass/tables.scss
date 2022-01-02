@@ -1,0 +1,20 @@
+table {
+  border: 1px solid;
+  padding: 0.5em;
+  width: 100%;
+}
+
+@media #{$phone} {
+  table {
+    padding: 0.25em;
+  }
+}
+
+th,
+td {
+  padding: 0.125em 0.25em;
+}
+
+thead > tr {
+  border-bottom: 1px solid;
+}

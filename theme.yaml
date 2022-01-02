@@ -1,0 +1,13 @@
+name: Chakra
+license: GNU GPL v3
+licenselink: https://github.com/krry/chakra-hugo-theme/blob/master/LICENSE
+description: a clean, energetic, left-handed theme for Hugo
+homepage: http://atmanaut.me/
+tags: []
+features: []
+min_version: 0.41
+
+author:
+  name: krry
+  homepage: https://github.com/krry
+

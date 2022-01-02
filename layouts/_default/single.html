@@ -1,0 +1,47 @@
+{{ define "nav" -}}
+{{ partial "tags/cloud.html" . }}
+{{- end -}}
+
+{{- define "main" -}}
+<div id="post" class="post">
+  <div id="scrolliner" class="scrolliner"></div>
+  <h1 class="title-main">
+    {{- with .Params.title_main -}}
+    {{- . | markdownify -}}
+    {{- else -}}
+    {{ title .Title }}
+    {{- end -}}
+  </h1>
+  {{- with .Params.title_sub -}}
+  <h2 class="title-sub">{{.}}</h2>
+  {{- end -}}
+  {{- with .Params.title_lead -}}
+  <h3 class="title-lead">{{ . | markdownify }}</h3>
+  {{- end -}}
+  <div id="byline" class="byline">
+    {{ $author := .Params.author | default "Atmanaut" }}
+    <address rel="author">By <a href="{{ lower (print "/authors/" $author) }}">{{ $author }}</a></address>
+  </div>
+  {{- if .Date }}
+  <div class="byline">
+    <time pubdate datetime="{{ .Date.Format '2006-01-02T15:04:05Z0700' }}"
+      class="post-date">on {{ .Date.Format "2 Jan 2006" }}</time>
+  </div>
+  {{ end -}}
+  {{ .Content }}
+  {{- if .Params.tags -}}
+  {{ partial "tags.html" . }}
+  {{- end -}}
+</div>
+<div id="comments" class="post comments">
+  <h2 class="subtitle">Comment</h2>
+  <script src="https://utteranc.es/client.js"
+          repo="github_username/repo_name"
+          issue-term="title"
+          label="😱🤯💬"
+          theme="icy-dark"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+{{- end }}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}}
+  xml:lang="{{.}}" lang="{{.}}"{{end}} class="wallpaper"
+  style="background-color: #0e3f49;">
+  <head>
+    {{- partial "head.html" . -}}
+    {{- block "pageStyles" . }}{{- end }}
+  </head>
+  <body class="dom-loading">
+    <div class="grid">
+      <div id="lefty" class="sticky col">
+        <main id="content" class="content" aria-role="main">
+          {{- block "main" . }}{{- end }}
+        </main>
+      </div>
+      <div id="menu" class="col floaty">
+        <aside class="sidebar">
+          {{ partial "header.html" . }}
+          <nav>
+            {{- block "nav" . }}{{- end }}
+          </nav>
+          {{ partial "footer.html" . }}
+        </aside>
+      </div>
+    </div>
+    {{ partial "search.html" . }}
+    {{ partial "menu.html" . }}
+    {{ partial "sprites.html" . }}
+    {{- block "pageScripts" . }}{{- end }}
+    {{- $custom := resources.Get "js/main.js" -}}
+    <script type="text/javascript" src="{{ $custom.Permalink }}" media="screen"></script>
+  </body>
+</html>

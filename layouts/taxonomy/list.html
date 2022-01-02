@@ -1,0 +1,20 @@
+{{ define "nav" -}}
+{{ partial "tags/cloud.html" . }}
+{{- end -}}
+
+{{- define "main" -}}
+<div class="taxonomy">
+  <h1>{{ .Title }}</h1>
+  <ul class="list-taxonomies">
+    {{ range .Data.Pages -}}
+    <li>
+      {{- if .Params.name -}}
+      <span><a href="{{ .Permalink }}">{{ humanize .Params.name }}</a></span>
+      {{- else if .Title -}}
+      <span><a href="{{ .Permalink }}">{{ humanize .Title }}</a></span>
+      {{- end -}}
+    </li>
+    {{- end -}}
+  </ul>
+</div>
+{{- end }}

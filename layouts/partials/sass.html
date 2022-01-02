@@ -1,0 +1,17 @@
+{{- $sass := resources.Get "sass/main.scss" -}}
+{{ if .Site.IsServer -}}
+{{- $style := $sass | resources.ToCSS -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen" />
+{{- else }}
+{{- $style := $sass | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint -}}
+<link
+  rel="stylesheet"
+  href="{{ $style.RelPermalink | absURL }}"
+  integrity="{{ $style.Data.Integrity }}"
+  media="screen"
+/>
+{{- end }}
+<link rel="stylesheet" media="screen" type="text/css" href="/css/recursive-font.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="/css/app.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="/css/syntax-manni.css" />
+<link rel="stylesheet" media="print" type="text/css" href="/css/print.css" />

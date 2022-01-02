@@ -1,0 +1,84 @@
+/* SIZES */
+
+$font-size: 16px;
+$bevel: 2.618rem;
+$bezel: 0.309rem;
+
+/* COLOR PALETTE */
+
+$color-salmon: hsl(346, 53%, 58%);
+$color-flesh: hsl(346, 53%, 52%);
+$color-vermilion: hsl(6, 60%, 60%);
+$color-canary: hsl(36, 90%, 74%);
+$color-grass: hsl(160, 76%, 46%);
+$color-leaf: hsl(160, 76%, 33%);
+$color-teal: hsl(192, 96%, 33%);
+$color-dank: hsl(192, 68%, 17%);
+$color-teal-dark: hsl(192, 83%, 10%);
+$color-levi: hsl(225, 93%, 39%);
+$color-cadet: hsl(225, 87%, 30%);
+$color-peri: hsl(225, 58%, 48%);
+$color-pink: hsl(315, 51%, 75%);
+$color-mauve: hsl(315, 32%, 48%);
+$color-violet: hsl(315, 43%, 34%);
+$color-orchid: hsl(315, 32%, 39%);
+$color-ink: hsl(285, 33%, 19%);
+$color-throb: hsl(285, 83%, 8%);
+$color-white: hsl(192, 23%, 94%);
+$color-white-extra: hsl(192, 23%, 98%);
+$color-gray-dark: hsl(192, 27%, 15%);
+$color-gray: hsl(192, 27%, 29%);
+$color-gray-mid: hsl(192, 23%, 50%);
+$color-gray-light: hsl(192, 33%, 75%);
+$color-black: hsl(192, 25%, 6%);
+$color-black-extra: hsl(192, 25%, 2%);
+$color-shade: transparentize($color-black, 0.75);
+$color-ghost: transparentize($color-white, 0.75);
+
+$color-bg: $color-white;
+$color-text: $color-gray-dark;
+$color-link: $color-levi;
+$color-title: $color-dank;
+$color-highlight: $color-peri;
+$color-muted: $color-gray;
+$color-done: $color-ink;
+$color-alert: $color-vermilion;
+$color-comments-bg: $color-black;
+$color-comments-link: $color-link;
+$color-comments-header: $color-title;
+$color-comments-border: $color-teal-dark;
+
+/* FONTS */
+
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times,
+		Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+$font-sans: 'Recursive', $sans-serif;
+$font-serif: 'Recursive', $serif;
+$font-mono: 'Recursive', $mono;
+$font-title: 'Recursive', $sans-serif;
+
+/* IMGS */
+$bg-img-phone: url('../img/splatter-back-phone.jpg');
+$bg-img-full: url('../img/splatter-back.jpg');
+$logo-white: url('../img/atmanaut-mono-white.png');
+$whoock: url('../img/whoock.png');
+
+/* MEDIA QUERIES */
+$phone: 'only screen and (max-width: 684px)';
+$tablet: 'only screen and (min-width: 684px)';
+$desktop: 'only screen and (min-width: 900px) and (min-height: 684px)';
+
+/* EASING FUNCTIONS */
+$ease-cubic: cubic-bezier(0.65, 0.05, 0.36, 1); // cubic
+$ease-quad: cubic-bezier(0.46, 0.03, 0.52, 0.96); // quadratic
+$ease-sine: cubic-bezier(0.45, 0.05, 0.55, 0.95); // sine
+
+/* DURATIONS */
+$quick: 309ms;
+$snappy: 618ms;
+$easily: 1s;

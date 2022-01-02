@@ -1,0 +1,48 @@
+a:link {
+  color: $color-link;
+  text-decoration: solid dotted;
+  text-decoration-color: transparent;
+  text-underline-offset: 1px;
+  text-decoration-thickness: 0px;
+  transition: all 309ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  --font-casual: 0;
+  --font-weight: inherit;
+  --font-cursive: 1;
+}
+
+a:link:hover {
+  --font-weight: 654;
+  --font-casual: 1;
+  --font-mono: 0;
+  color: $color-peri;
+  text-decoration-style: solid;
+  text-decoration-color: inherit;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+
+a:visited {
+  color: $color-violet;
+}
+
+a:visited:hover {
+  color: $color-mauve;
+}
+
+a:active {
+  color: $color-vermilion;
+}
+
+a:visited:active {
+  color: $color-salmon;
+}
+
+.sidebar a {
+  opacity: 0.8;
+  text-decoration: none;
+  transition: all $quick $ease-sine;
+
+  &:hover {
+    opacity: 1;
+  }
+}

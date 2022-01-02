@@ -1,0 +1,62 @@
+/* when header is shown, big logo, centered content, show tag cloud */
+header {
+  text-align: center;
+
+  .brand {
+    cursor: default;
+    padding: 1em 0;
+  }
+
+  .logo {
+    animation: spinner $quick infinite;
+    animation-play-state: paused;
+    animation-timing-function: linear;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    opacity: 0.7;
+    transition: $quick $ease-cubic;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .bloob {
+    width: 100%;
+  }
+
+  .site-title {
+    margin: 0.5em 0 0.25em;
+  }
+
+  .site-tagline {
+    margin-top: 0;
+  }
+
+  .site-title,
+  .site-tagline {
+    filter: brightness(200%) saturate(0.721);
+    display: block;
+  }
+}
+
+.sidebar a.home-link {
+  opacity: 1;
+  display: inline-block;
+  .site-title,
+  .site-tagline {
+    --font-weight: 824;
+  }
+  &:focus,
+  &:hover {
+    .site-title,
+    .site-tagline {
+      --font-weight: 618;
+      color: $color-pink;
+    }
+    outline: none;
+  }
+}

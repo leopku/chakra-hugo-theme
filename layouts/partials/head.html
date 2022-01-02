@@ -1,0 +1,21 @@
+<link href="//gmpg.org/xfn/11" rel="profile" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="{{ .Site.Params.colors.base }}" />
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+{{ range .AlternativeOutputFormats -}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+{{ end -}}
+{{ if .IsHome -}}
+<title>{{ .Site.Title }}</title>
+{{- else -}}
+<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+{{- end }}
+{{/*- partial "head_fonts.html" . -*/}}
+{{ partial "sass.html" . -}}
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="application-name" content="Atmanaut"/>

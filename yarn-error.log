@@ -1,0 +1,45 @@
+Arguments: 
+  /usr/local/Cellar/node/11.12.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js global add stylelint-config-standard
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:.:/Users/alan/.gem/ruby/2.3.0:/Library/Ruby/Gems/2.3.0:/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/lib/ruby/gems/2.3.0:/usr/local/Cellar/go/1.12/libexec/bin:/Users/alan/go/bin:/Users/alan/.cargo/bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  11.12.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, stat '/Users/alan/Drive/Code/web/atmanaut/README.md'
+
+npm manifest: 
+  {
+      "name": "chakra",
+      "description": "A left-handed Hugo theme balancing its energy in left-field",
+      "license": "MIT",
+      "repository": "https://github.com/krry/chakra-hugo-theme.git",
+      "browserslist": [
+          "last 1 version",
+          "> 1%",
+          "maintained node versions",
+          "not dead"
+      ],
+      "dependencies": {
+          "autoprefixer": "^9.4.7",
+          "browserslist": "^4.4.1"
+      },
+      "devDependencies": {
+          "stylelint": "^9.10.1",
+          "stylelint-config-standard": "^18.2.0"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

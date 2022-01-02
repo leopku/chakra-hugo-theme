@@ -1,0 +1,37 @@
+<header>
+  <div class="brand">
+    <div class="logo"></div>
+    <a class="" href="{{ .Site.Home.RelPermalink }}">
+      <h1 class="site-title">{{ $.Site.Title }}</h1>
+      <h2 class="site-tagline">{{ $.Site.Params.description }}</h2>
+    </a>
+  </div>
+  <nav>
+    <ul>
+      {{ $currentPage := . -}}
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+          <a href="#">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+        </li>
+        <ul class="sub-menu">
+          {{ range .Children -}}
+          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+          {{- end }}
+        </ul>
+        {{ else }}
+        <li>
+          <a href="{{ .URL }}">
+            <span>{{ .Pre }}</span>
+          </a>
+        </li>
+        {{- end }}
+      {{- end }}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,157 @@
+.taxonomy {
+  .divider {
+    display: none;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  a + .divider {
+    background-image: linear-gradient(to right, transparent, $color-shade, transparent);
+    border: 0;
+    border-radius: 100%;
+    display: block;
+    height: 2px;
+    margin: 2rem auto;
+    width: 77%;
+  }
+
+  dt {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, $color-teal, $color-levi);
+    color: transparent;
+    font-weight: bolder;
+    text-decoration-color: transparent;
+  }
+
+  a:hover dt {
+    background-image: linear-gradient(180deg, $color-teal, $color-dank);
+    text-decoration-color: $color-dank;
+  }
+
+  dd {
+    border-left: 5px solid $color-shade;
+    color: $color-text;
+    margin-left: 1em;
+    padding-left: 1em;
+    transition: $snappy;
+  }
+
+  a:hover dd {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(180deg, $color-dank, $color-teal);
+  }
+
+  h1,
+  .taxonomy-title {
+    // font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+    border: 1px solid $color-shade;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  dl {
+    margin-bottom: 3rem;
+  }
+}
+
+.sources {
+  width: 61.8%;
+  margin-left: auto;
+  margin-right: auto;
+  ul, li {
+    padding-left: 0;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+.taxonomy-title {
+  font-size: 2em;
+}
+
+.taxonomy-term {
+  font-size: 75%;
+  a {
+    border-radius: 0.25em;
+    color: $color-muted;
+    font-family: $font-sans;
+    font-weight: 300;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all $quick $ease-sine;
+
+    &:hover {
+      background-color: transparentize($color: $color-teal, $amount: 0.85);
+      color: $color-teal;
+    }
+  }
+}
+
+.post .taxonomy-term::before {
+  content: '';
+}
+
+.taxonomy-term a::before {
+  content: '#';
+  font-size: 87.5%;
+}
+
+.profile-pic {
+  background: $color-cadet;
+  border: 3px solid $color-dank;
+  border-radius: 1em;
+  box-shadow: inset 0 0 1em 0.25em transparentize($color-black, 0.5);
+  max-height: 240px;
+  padding: 3px;
+}
+
+.sidebar .list-inline .taxonomy-term {
+  margin-right: 0;
+}
+
+.sidebar {
+  a:link {
+    color: $color-white;
+  }
+}
+
+.sidebar .taxonomy-term {
+  a:hover {
+    background-color: transparentize($color-cadet, 0.8);
+    color: $color-peri;
+  }
+
+  a:active {
+    background-color: transparentize($color-dank, 0.8);
+    color: $color-teal;
+  }
+
+  a:visited {
+    color: $color-gray-light;
+
+    &:hover {
+      background-color: transparentize($color-violet, 0.8);
+      color: $color-mauve;
+    }
+
+    &:active {
+      background-color: transparentize($color-flesh, 0.8);
+      color: $color-salmon;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+pre,
+code,
+samp {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.chroma {
+  background-color: $color-black;
+
+  .c,
+  .c1,
+  .cm {
+    color: $color-gray-light;
+  }
+}
+
+h4 > code,
+p > code {
+  background-color: $color-white-extra;
+  border-radius: 2px;
+  margin: 0 1px;
+  padding: 0 2px;
+}
+
+.highlight {
+  @media #{$phone} {
+    margin: 0.5rem -2em;
+
+    pre {
+      padding: 1em 2.5em;
+    }
+  }
+
+  p,
+  span,
+  ul,
+  ol,
+  dl {
+    font-family: $font-mono;
+  }
+
+  pre {
+    margin: auto;
+    max-width: 80ch;
+    padding: 1rem;
+  }
+}

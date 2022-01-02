@@ -1,0 +1,67 @@
+.button-reset {
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  appearance: none;
+  background: transparent;
+  border: 0;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+.btn {
+  background-color: $color-teal;
+  border: 2px solid $color-dank;
+  border-radius: 0.25em;
+  color: $color-white-extra;
+  font-size: 0.875rem;
+  height: 2.25em;
+  line-height: 2.25em;
+  padding: 0 1.25em;
+  transition: all $quick $ease-sine;
+}
+
+.btn.center {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.btn.outline {
+  border: 2px solid $color-dank;
+
+  &:hover {
+    border-color: $color-teal;
+  }
+}
+
+.btn.clear {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 0.825rem;
+}

@@ -1,0 +1,50 @@
+.list-reset {
+  font-family: $font-sans;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.post li {
+  font-family: $font-serif;
+}
+
+.post ul li::before {
+  content: '\2619';
+  margin-left: -1em;
+  margin-right: 0.5em;
+}
+
+.list-inline {
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+
+  li::before {
+    content: '';
+    margin: 0;
+  }
+}
+
+ul.tag-cloud {
+  line-height: 1.309;
+}
+
+dt {
+  font-family: $font-sans;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+dd + dt {
+  margin-top: 1em;
+}
+
+.list-sources {
+  // font-family: $font-sans;
+}
